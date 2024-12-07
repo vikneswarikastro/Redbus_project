@@ -50,11 +50,6 @@ query = """
     AND price <= %s 
     AND seat_availability >= %s
 """
- # Extract time from DATETIME and compare
-# Convert the selected_time to the appropriate format (HH:MM:SS)
-
-#selected_time_str = selected_time.strftime('%H:%M:%S')
-#st.write(selected_time)
 
 # Prepare the tuple to be passed to the query
 params = (
@@ -102,4 +97,3 @@ st.write(f"Time: {selected_time}")
 mycursor.close()
 connection.close()
 
-#df['event_time'] = df['event_time'].dt.strftime('%H:%M:%S')
